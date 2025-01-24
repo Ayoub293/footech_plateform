@@ -11,9 +11,9 @@ from pymongo import MongoClient
 options = Options()
 options.headless = True  # تشغيل في الخلفية (بدون واجهة)
 
-# مسار geckodriver أو chromedriver (تأكد من استخدام المسار الصحيح على جهازك)
-service = Service("/path/to/geckodriver")  # أو path/to/chromedriver لو تستخدم Chrome
-driver = webdriver.Chrome(service=service, options=options)
+# مسار geckodriver
+service = Service("/usr/local/bin/geckodriver")
+driver = webdriver.Firefox(service=service, options=options)
 
 # فتح موقع ترانسفير ماركت
 driver.get("https://www.transfermarkt.com/")
@@ -68,4 +68,3 @@ collection = db["players"]
 collection.insert_many(players)
 
 print(f"تم جلب {len(players)} لاعبًا بنجاح!")
-
