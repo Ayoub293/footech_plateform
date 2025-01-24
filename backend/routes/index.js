@@ -2,6 +2,19 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const express = require('express');
 const cors = require('cors');
+const router = express.Router();
+
+// Define your routes here
+router.get('/', (req, res) => {
+    res.send('fooTech API Routes are working');
+});
+
+// Example route for testing
+router.get('/example', (req, res) => {
+    res.send('This is an example route from routes/index.js');
+});
+
+module.exports = router;
 
 dotenv.config();
 
