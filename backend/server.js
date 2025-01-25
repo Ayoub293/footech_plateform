@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 
 // Route محمي باستخدام authMiddleware
 app.get('/protected', authMiddleware, (req, res) => {
-  res.send('This is a protected route!');
+  res.send('This is a protected  route!');
 });
 
 // Route التسجيل مع التحقق من البيانات
