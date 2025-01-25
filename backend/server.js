@@ -33,7 +33,7 @@ mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology
 
 // Route للـ اختبار
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Welcom to Footech Server');
 });
 
 // Route محمي باستخدام authMiddleware
