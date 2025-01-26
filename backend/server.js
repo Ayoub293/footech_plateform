@@ -21,13 +21,13 @@ app.use(express.json()); // لتحليل البيانات المرسلة كـ JS
 app.use(morgan('dev')); // لتسجيل الطلبات أثناء التطوير
 
 // الاتصال بقاعدة البيانات
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log("Database connected");
-  })
-  .catch((err) => {
-    console.error("Database connection error:", err);
-  });
+//mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  //.then(() => {
+   // console.log("Database connected");
+ // })
+  //.catch((err) => {
+   // console.error("Database connection error:", err);
+ // });
 
 // Routes
 
